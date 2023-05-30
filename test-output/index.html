@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.tValidateProdWithRange" hash-for-method="dataHandling">dataHandling</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.tValidateProdWithRange" hash-for-method="ValidateProducts">ValidateProducts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.API_tests" hash-for-method="createBooking">createBooking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.API_tests" hash-for-method="deleteBooking">deleteBooking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.API_tests" hash-for-method="geBooking">geBooking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.API_tests" hash-for-method="getToken">getToken</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -114,7 +134,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.tValidateProdWithRange" hash-for-method="validlogin">validlogin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.API_tests" hash-for-method="updateBooking">updateBooking</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,21 +152,57 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">TestCases.API_tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createBooking">
+                  </a> <!-- createBooking -->
+                  <span class="method-name">createBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteBooking">
+                  </a> <!-- deleteBooking -->
+                  <span class="method-name">deleteBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="geBooking">
+                  </a> <!-- geBooking -->
+                  <span class="method-name">geBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getToken">
+                  </a> <!-- getToken -->
+                  <span class="method-name">getToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateBooking">
+                  </a> <!-- updateBooking -->
+                  <span class="method-name">updateBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">TestCases.tValidateProdWithRange</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="dataHandling">
-                  </a> <!-- dataHandling -->
-                  <span class="method-name">dataHandling</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validlogin">
-                  </a> <!-- validlogin -->
-                  <span class="method-name">validlogin</span>
+                  <a name="ValidateProducts">
+                  </a> <!-- ValidateProducts -->
+                  <span class="method-name">ValidateProducts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,6 +234,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;TestCases.API_tests&quot;/&gt;
       &lt;class name=&quot;TestCases.tSearchAndPrintResult&quot;/&gt;
       &lt;class name=&quot;TestCases.tValidateProdWithRange&quot;/&gt;
     &lt;/classes&gt;
@@ -193,7 +250,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -219,19 +276,35 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validlogin')
+data.setCell(0, 1, 'ValidateProducts')
 data.setCell(0, 2, 'TestCases.tValidateProdWithRange')
-data.setCell(0, 3, 99011);
+data.setCell(0, 3, 121525);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchResultAndloginToAmazon')
 data.setCell(1, 2, 'TestCases.tSearchAndPrintResult')
-data.setCell(1, 3, 70192);
+data.setCell(1, 3, 42848);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'dataHandling')
-data.setCell(2, 2, 'TestCases.tValidateProdWithRange')
-data.setCell(2, 3, 2858);
+data.setCell(2, 1, 'createBooking')
+data.setCell(2, 2, 'TestCases.API_tests')
+data.setCell(2, 3, 5957);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'updateBooking')
+data.setCell(3, 2, 'TestCases.API_tests')
+data.setCell(3, 3, 1772);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'getToken')
+data.setCell(4, 2, 'TestCases.API_tests')
+data.setCell(4, 3, 1274);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'geBooking')
+data.setCell(5, 2, 'TestCases.API_tests')
+data.setCell(5, 3, 1236);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'deleteBooking')
+data.setCell(6, 2, 'TestCases.API_tests')
+data.setCell(6, 3, 1204);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -257,9 +330,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestCases.tValidateProdWithRange</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">endReport</span>
-                <br/>
                 <span class="ignored-method-name">ExtentReport</span>
+                <br/>
+                <span class="ignored-method-name">endReport</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -276,39 +349,57 @@ return data;
                 <span class="method-name">ExtentReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.API_tests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createBooking</span>
+                <span class="method-start">512 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">geBooking</span>
+                <span class="method-start">6484 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getToken</span>
+                <span class="method-start">7723 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateBooking</span>
+                <span class="method-start">8999 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteBooking</span>
+                <span class="method-start">10776 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.tSearchAndPrintResult</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchUrl</span>
-                <span class="method-start">522 ms</span>
+                <span class="method-start">11984 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchResultAndloginToAmazon</span>
-                <span class="method-start">10756 ms</span>
+                <span class="method-start">11985 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.tValidateProdWithRange</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchUrl</span>
-                <span class="method-start">80969 ms</span>
+                <span class="method-start">54839 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">dataHandling</span>
-                <span class="method-start">85859 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">launchUrl</span>
-                <span class="method-start">88720 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validlogin</span>
-                <span class="method-start">96342 ms</span>
+                <span class="method-name">ValidateProducts</span>
+                <span class="method-start">54839 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.tSearchAndPrintResult</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">195356 ms</span>
+                <span class="method-start">176368 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

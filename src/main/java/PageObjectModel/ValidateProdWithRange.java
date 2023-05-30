@@ -26,12 +26,14 @@ public class ValidateProdWithRange
 	public By prodSecondPage = By.xpath("//span[@data-component-type='s-search-results']//span[@class='a-price-whole']");
 	By page2 = By.xpath("//a[@aria-label='Go to page 2']");
 	By rating = By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']//span[contains(text(),'5.0 out of 5 stars')]/ancestor::div[@class='a-section a-spacing-small a-spacing-top-small']/div/h2/a");
-//	public By wishList = By.xpath("//div[@id='addToWishlist_feature_div']");
+	public By wishList = By.xpath("(//form[@id='addToCart'])[2]");
 //	public By wishList = By.xpath("//input[@id='add-to-wishlist-button-submit']");
-//	public By wishList = By.xpath("//span[@id='wishListMainButton']");
-	public By wishList = By.xpath("//div[@id='wishlistButtonStack']");
+//	public By wishList = By.xpath("//span[@id='wishListMainButton']//span[@id='al-add-to-list-button-early-click-span']");
+	public By wishListdrp = By.xpath("//input[@id='add-to-wishlist-button']");
+	public By createWishList = By.xpath("//a[@id='atwl-dd-create-list']");
+	public By btnCreateWishList = By.xpath("//input[@class='a-button-input a-declarative']");
+	public By viewWishList = By.xpath("//a[contains(text(),'View Wish List')]']");
 	
-	//div[@id='wishlistButtonStack']
 	public ValidateProdWithRange(WebDriver driver) 
 	{ 
 		this.driver = driver;
@@ -62,9 +64,14 @@ public class ValidateProdWithRange
 			return driver.findElement(go);
 		else if (serachBy.equalsIgnoreCase("page2"))
 			return driver.findElement(page2);
-		else if (serachBy.equalsIgnoreCase("wishList"))
-			return driver.findElement(wishList);
-		
+		else if (serachBy.equalsIgnoreCase("wishListdrp"))
+			return driver.findElement(wishListdrp);
+		else if (serachBy.equalsIgnoreCase("createWishList"))
+			return driver.findElement(createWishList);
+		else if (serachBy.equalsIgnoreCase("btnCreateWishList"))
+			return driver.findElement(btnCreateWishList);
+		else if (serachBy.equalsIgnoreCase("viewWishList"))
+			return driver.findElement(viewWishList);
 		
 		return null;
 	}

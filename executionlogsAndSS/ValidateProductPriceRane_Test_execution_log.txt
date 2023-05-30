@@ -1,0 +1,43 @@
+Print and validate all products price : 
+30
+44,992
+45,989
+49,990
+36,990
+40,990
+47,990
+36,990
+39,490
+41,990
+39,990
+39,703
+36,999
+49,490
+39,990
+39,990
+46,990
+39,990
+41,990
+44,999
+48,990
+35,790
+42,862
+46,500
+48,000
+41,990
+43,500
+36,790
+38,990
+35,990
+49,490
+Print and validate all products price of page 2 : 
+5
+36,990
+48,990
+48,000
+41,499
+35,990
+Print and validate all 5 Star Rating produtcs : 
+1
+ Product name : 
+Dell Vostro 3425 Laptop, Ryzen R5-5625U, 8GB DDR4, 512GB SSD, 14.0" (35.56Cms) FHD WVA AG 250 nits, Windows 11 + MSO'21, Carbon Black, (D552306WIN9BE, 1.48Kgs)

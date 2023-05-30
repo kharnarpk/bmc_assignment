@@ -13,7 +13,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.testng.asserts.SoftAssert;
+import org.testng.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import PageObjectModel.ValidateProdWithRange;
 import Resources.BaseClass;
@@ -35,7 +38,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @Test
 public class tValidateProdWithRange extends BaseClass {
 
-	SoftAssert assertion = new SoftAssert();
 	String userName;
 	String password;
 	
@@ -47,15 +49,28 @@ public class tValidateProdWithRange extends BaseClass {
 	public void ValidateProducts() throws IOException, InterruptedException, StaleElementReferenceException {
 
 		try {
+			initializeDriver();
+			String url=prop.getProperty("urlValidateProdWithRange");
+			driver.manage().window().maximize();
+			driver.get(url);
 
-//			dataHandling();
+//			System.out.println("Data access from Excel Sheet:"+"\n");
+			FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\amazonLoginDetails.xlsx");
+	        XSSFWorkbook workbook = new XSSFWorkbook(fs);
+			XSSFSheet sheet = workbook.getSheetAt(0);
+			Row row = sheet.getRow(1);
+			
+			Cell cell = row.getCell(1);
+			userName = cell.toString();
+			
+			Cell cell1 = row.getCell(2);
+			password = cell1.toString();
+			
 			ValidateProdWithRange vProd = new ValidateProdWithRange(driver);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(70));
 
-//6.	login to https://www.amazon.in/
+//6.	login to https://www.amazon.in/ (with taking login details from excel sheet)
 
-//			System.out.println("Username : " +userName);
-//			System.out.println("Password : " +password);
 			vProd.getSignIn().click();
 			vProd.search("email").sendKeys(userName);
 			vProd.search("continue").click();
@@ -87,13 +102,13 @@ public class tValidateProdWithRange extends BaseClass {
 
 			System.out.println("Print and validate all products price : ");
 			System.out.println(listResult.size());
-			// if you want to print matching results
+
 			for (WebElement results : listResult) {
 				String value = results.getText();
 				System.out.println(value);
 				String value1 = value.replaceAll(",", "");
 				int price = Integer.parseInt(value1);
-				assertion.assertTrue(price >= 30000 && price <= 50000);
+				Assert.assertTrue(price >= 30000 && price <= 50000);
 			}
 
 			vProd.search("page2").click();
@@ -111,14 +126,14 @@ public class tValidateProdWithRange extends BaseClass {
 				System.out.println(value);
 				String value1 = value.replaceAll(",", "");
 				int price = Integer.parseInt(value1);
-				assertion.assertTrue(price >= 30000 && price <= 50000);
+				Assert.assertTrue(price >= 30000 && price <= 50000);
 			}
-
+			
 //11.	print all the products on the first 2 pages whose rating is 5 out of 5
 
 			List<WebElement> listRating = vProd.searchElements("rating");
 
-			System.out.println("Print and validate stars of all produtcs : ");
+			System.out.println("Print and validate all 5 Star Rating produtcs : ");
 			System.out.println(listRating.size());
 			for (WebElement results : listRating) {
 				System.out.println(" Product name : ");
@@ -126,49 +141,48 @@ public class tValidateProdWithRange extends BaseClass {
 				System.out.println(value);
 			}
 
-//12.	add the first product whose rating is 5 out of 5 to the wishlist.(Create a new wishlist)
+//12.	add the first product whose rating is 5 out of 5 to the wish list.(Create a new wish list)
 
 			System.out.println(" First 5 star product : " + listRating.get(0));
 			listRating.get(0).click();
 
-			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
-			wait1.until(ExpectedConditions.presenceOfElementLocated(vProd.wishList));
-			vProd.search("wishList").click();
-
+//			screenShot(driver, "First5StarRatingProduct");
+			
+			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
+			wait1.until(ExpectedConditions.presenceOfElementLocated(vProd.wishListdrp));
+//			vProd.search("wishListdrp").click();
+			vProd.search("createWishList").click();
+			vProd.search("btnCreateWishList").click();
+			vProd.search("viewWishList").click();
+			
+//			Actions act = new Actions(driver);
+//			
+//			Actions builder = new Actions(driver);
+//            Action mouseOverHome = builder
+//                    .moveToElement(wait1.until(ExpectedConditions.presenceOfElementLocated(vProd.wishList)))
+//                    .build();
+             
+  //            mouseOverHome.perform(); 
+            
+//			JavascriptExecutor js = (JavascriptExecutor) driver;  
+//    		js.executeScript("arguments[0].click();", vProd.search("wishListdrp"));
+			 
 //			WebElement l = driver.findElement(By.name("//div[@id='addToWishlist_feature_div']"));
 //		      //JavaScript Executor to click element
 //		      JavascriptExecutor j = (JavascriptExecutor) driver;
 //		      j.executeScript("arguments[0].click();", l);
 
-//13.	Validatetheproductisaddedto thewishlist
+//13.	Validate the product is added to the wish list
 
-			assertion.assertEquals(null, listResult.get(0));
+			Assert.assertEquals(null, listResult.get(0));
 
-			assertion.assertAll();
 		} catch (Exception e) {
+
 			System.out.println(e.toString());
 		}
 	}
 	
 	
 	
-	public void dataHandling() throws Exception
-	{
-
-		System.out.println("Data access from Excel Sheet:"+"\n");
-		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\amazonLoginDetails.xlsx");
-        XSSFWorkbook workbook = new XSSFWorkbook(fs);
-		XSSFSheet sheet = workbook.getSheetAt(0);
-		Row row = sheet.getRow(1);
-		
-		Cell cell = row.getCell(1);
-		userName = cell.toString();
-//		System.out.println(userName); //Username access from excel sheet
-		
-		Cell cell1 = row.getCell(2);
-		password = cell1.toString();
-//		System.out.println(password); //Password access from excel sheet
-		
-
-	}
+	
 }

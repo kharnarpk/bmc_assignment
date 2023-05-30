@@ -1,43 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+<testng-results skipped="0" failed="0" ignored="2" total="9" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="196050" started-at="2023-05-29T04:50:09 IST" finished-at="2023-05-29T04:53:25 IST">
+  <suite name="Suite" duration-ms="177142" started-at="2023-05-31T02:32:05 IST" finished-at="2023-05-31T02:35:02 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="196050" started-at="2023-05-29T04:50:09 IST" finished-at="2023-05-29T04:53:25 IST">
+    <test name="Test" duration-ms="177142" started-at="2023-05-31T02:32:05 IST" finished-at="2023-05-31T02:35:02 IST">
+      <class name="TestCases.API_tests">
+        <test-method status="PASS" signature="createBooking()[pri:1, instance:TestCases.API_tests@149494d8]" name="createBooking" duration-ms="5957" started-at="2023-05-31T02:32:05 IST" finished-at="2023-05-31T02:32:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method status="PASS" signature="geBooking()[pri:2, instance:TestCases.API_tests@149494d8]" name="geBooking" duration-ms="1236" started-at="2023-05-31T02:32:11 IST" finished-at="2023-05-31T02:32:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- geBooking -->
+        <test-method status="PASS" signature="getToken()[pri:3, instance:TestCases.API_tests@149494d8]" name="getToken" duration-ms="1274" started-at="2023-05-31T02:32:13 IST" finished-at="2023-05-31T02:32:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getToken -->
+        <test-method status="PASS" signature="updateBooking()[pri:4, instance:TestCases.API_tests@149494d8]" name="updateBooking" duration-ms="1772" started-at="2023-05-31T02:32:14 IST" finished-at="2023-05-31T02:32:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBooking -->
+        <test-method status="PASS" signature="deleteBooking()[pri:5, instance:TestCases.API_tests@149494d8]" name="deleteBooking" duration-ms="1204" started-at="2023-05-31T02:32:16 IST" finished-at="2023-05-31T02:32:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking -->
+      </class> <!-- TestCases.API_tests -->
       <class name="TestCases.tValidateProdWithRange">
-        <test-method status="PASS" signature="launchUrl()[pri:0, instance:TestCases.tValidateProdWithRange@7ba18f1b]" name="launchUrl" is-config="true" duration-ms="4889" started-at="2023-05-29T04:51:30 IST" finished-at="2023-05-29T04:51:35 IST">
+        <test-method status="PASS" signature="launchUrl()[pri:0, instance:TestCases.tValidateProdWithRange@5a4041cc]" name="launchUrl" is-config="true" duration-ms="0" started-at="2023-05-31T02:33:00 IST" finished-at="2023-05-31T02:33:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchUrl -->
-        <test-method status="PASS" signature="dataHandling()[pri:0, instance:TestCases.tValidateProdWithRange@7ba18f1b]" name="dataHandling" duration-ms="2858" started-at="2023-05-29T04:51:35 IST" finished-at="2023-05-29T04:51:38 IST">
+        <test-method status="PASS" signature="ValidateProducts()[pri:0, instance:TestCases.tValidateProdWithRange@5a4041cc]" name="ValidateProducts" duration-ms="121525" started-at="2023-05-31T02:33:00 IST" finished-at="2023-05-31T02:35:01 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataHandling -->
-        <test-method status="PASS" signature="launchUrl()[pri:0, instance:TestCases.tValidateProdWithRange@7ba18f1b]" name="launchUrl" is-config="true" duration-ms="7622" started-at="2023-05-29T04:51:38 IST" finished-at="2023-05-29T04:51:46 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchUrl -->
-        <test-method status="PASS" signature="validlogin()[pri:0, instance:TestCases.tValidateProdWithRange@7ba18f1b]" name="validlogin" duration-ms="99011" started-at="2023-05-29T04:51:46 IST" finished-at="2023-05-29T04:53:25 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validlogin -->
+        </test-method> <!-- ValidateProducts -->
       </class> <!-- TestCases.tValidateProdWithRange -->
       <class name="TestCases.tSearchAndPrintResult">
-        <test-method status="PASS" signature="ExtentReport()[pri:0, instance:TestCases.tSearchAndPrintResult@587c290d]" name="ExtentReport" is-config="true" duration-ms="472" started-at="2023-05-29T04:50:09 IST" finished-at="2023-05-29T04:50:10 IST">
+        <test-method status="PASS" signature="ExtentReport()[pri:0, instance:TestCases.tSearchAndPrintResult@71623278]" name="ExtentReport" is-config="true" duration-ms="468" started-at="2023-05-31T02:32:05 IST" finished-at="2023-05-31T02:32:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExtentReport -->
-        <test-method status="PASS" signature="launchUrl()[pri:0, instance:TestCases.tSearchAndPrintResult@587c290d]" name="launchUrl" is-config="true" duration-ms="10232" started-at="2023-05-29T04:50:10 IST" finished-at="2023-05-29T04:50:20 IST">
+        <test-method status="PASS" signature="launchUrl()[pri:0, instance:TestCases.tSearchAndPrintResult@71623278]" name="launchUrl" is-config="true" duration-ms="0" started-at="2023-05-31T02:32:17 IST" finished-at="2023-05-31T02:32:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchUrl -->
-        <test-method status="PASS" signature="searchResultAndloginToAmazon()[pri:0, instance:TestCases.tSearchAndPrintResult@587c290d]" name="searchResultAndloginToAmazon" duration-ms="70192" started-at="2023-05-29T04:50:20 IST" finished-at="2023-05-29T04:51:30 IST">
+        <test-method status="PASS" signature="searchResultAndloginToAmazon()[pri:0, instance:TestCases.tSearchAndPrintResult@71623278]" name="searchResultAndloginToAmazon" duration-ms="42848" started-at="2023-05-31T02:32:17 IST" finished-at="2023-05-31T02:33:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchResultAndloginToAmazon -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:TestCases.tSearchAndPrintResult@587c290d]" name="endReport" is-config="true" duration-ms="685" started-at="2023-05-29T04:53:25 IST" finished-at="2023-05-29T04:53:25 IST">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:TestCases.tSearchAndPrintResult@71623278]" name="endReport" is-config="true" duration-ms="764" started-at="2023-05-31T02:35:01 IST" finished-at="2023-05-31T02:35:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

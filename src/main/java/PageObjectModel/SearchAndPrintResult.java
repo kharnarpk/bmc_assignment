@@ -10,7 +10,7 @@ public class SearchAndPrintResult
 {
 	public WebDriver driver;
 	
-	By search=By.xpath("//textarea[@title='Search']");
+	By search=By.xpath("//*[@title='Search']");
 	By searchResult = By.xpath("//div[@class='GyAeWb']//a");
 //	By searchResult = By.xpath("//div[@class='eqAnXb FcOujd']//a");
 	By amazonLink = By.xpath("(//div[@class='GyAeWb']//a)[1]"); 

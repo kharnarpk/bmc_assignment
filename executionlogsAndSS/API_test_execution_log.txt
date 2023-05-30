@@ -1,0 +1,37 @@
+
+ ---------- Create booking ---------- 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Request Body is: {"firstname" : "Jim","lastname" : "Brown","totalprice" : 111,"depositpaid" : true,"bookingdates" : {"checkin" : "2023-04-04","checkout" : "2023-04-05"},"additionalneeds" : "Breakfast"}
+Create booking Status code : 200
+Response Body is: {"bookingid":320,"booking":{"firstname":"Jim","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2023-04-04","checkout":"2023-04-05"},"additionalneeds":"Breakfast"}}
+Booking id is: 320
+
+
+ ---------- Get booking ---------- 
+Get booking baseURI : https://restful-booker.herokuapp.com/booking/320
+Get booking Status code : 200
+Response : {"firstname":"Jim","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2023-04-04","checkout":"2023-04-05"},"additionalneeds":"Breakfast"}
+
+
+ ---------- Get token ----------  
+Request Body is: {"username" : "admin","password" : "password123"}
+Cretae Token status code : 200
+
+
+ ---------- Update booking ----------  
+Update booking baseURI : https://restful-booker.herokuapp.com/booking/320
+Request Body is: {"firstname" : "Pallavi","lastname" : "Brown","totalprice" : 111,"depositpaid" : true,"bookingdates" : {"checkin" : "2023-04-04","checkout" : "2023-04-05"},"additionalneeds" : "Breakfast"}
+Update booking Status code : 200
+Response : {"firstname":"Pallavi","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2023-04-04","checkout":"2023-04-05"},"additionalneeds":"Breakfast"}
+
+
+ ---------- Delete booking ----------  
+Delete booking Status code : 201
+Response : Created
+
+===============================================
+Suite
+Total tests run: 5, Passes: 5, Failures: 0, Skips: 0
+===============================================

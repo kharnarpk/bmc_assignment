@@ -1,0 +1,34 @@
+Print all search resut : 
+20
+Shop Online at Amazon India - India's largest online store
+Amazon.in
+https://www.amazon.in
+Amazon fashion
+No Cost EMI on Mobiles
+Trending Electronics
+Toys & games
+Amazon.in
+Amazon.in
+https://www.amazon.in
+Today's Deals
+Amazon Prime
+Amazon Pay
+Home & Kitchen
+More results from amazon.in »
+Amazon.com. Spend less. Smile more.
+Amazon.com
+https://www.amazon.com
+Amazon (@amazon) · Twitter
+https://twitter.com/amazon
+
+
+amzn.to/3LA5Shu
+
+amzn.to/3OfFM52
+
+
+
+===============================================
+Suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
